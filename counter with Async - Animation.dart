@@ -63,6 +63,18 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     }
   }
 
+  /// Counter using flutter_animate package
+  void counterWithPackage(){
+    Animate()
+                .custom(
+                  duration: 10.seconds,
+                  begin: 10,
+                  end: 0,
+                  builder: (_, value, __) => Text(value.round().toString()),
+                )
+                .fadeOut();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
